@@ -1,0 +1,36 @@
+<div class="container">
+	<div class="card">
+		
+		<div class="card-header text-center">
+			<h3> USUARIOS </h3>
+		</div>
+
+		<div class="card-body">
+			<table class="table table-bordered">
+				<thead>
+					<tr class="text-center">
+						<th> ID </th>
+						<th> USUARIO </th>
+						<th> CONTRASEÑA </th>
+					</tr>
+				</thead>
+
+				<tbody>
+					@for (usuario of usuarios; track usuario.id) {
+						<tr class="text-center">
+							<td> {{usuario.id}} </td>
+							<td> {{usuario.usuario}} </td>
+							<td>
+								<button class="btn btn-outline-dark" style="margin-right: 15px;" type="button" (click)="listarCifrado(usuario)"> MOSTRAR CIFRADA </button>
+								<button class="btn btn-outline-dark" type="button" (click)="listarDescifrado(usuario)"> MOSTRAR DESCIFRADA </button>
+							</td>
+						</tr>
+					}@empty {
+						<td colspan="3" style="text-align: center;"> NO EXISTEN REGISTROS </td>
+					}
+				</tbody>
+			</table>
+		</div>
+
+	</div>
+</div>
