@@ -25,4 +25,8 @@ export class AppComponent implements OnInit{
 		this.router.navigate(['registrar']);
 	}
 
+	regresar(){
+		this.router.navigate(['listar']);
+	}
+
 }
