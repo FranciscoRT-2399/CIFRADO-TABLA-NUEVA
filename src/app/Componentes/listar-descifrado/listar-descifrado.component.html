@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="card">
+    <div class="card-header text-center">
+      <h3>CONTRASEÑA DESCIFRADA</h3>
+    </div>
+
+    <div class="card-body">
+      <table class="table table-bordered">
+        <thead>
+          <tr class="text-center">
+            <th>ID</th>
+            <th>USUARIO</th>
+            <th>CONTRASEÑA</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="text-center">
+            <td>{{ usuario.id }}</td>
+            <td>{{ usuario.usuario }}</td>
+            <td>{{ usuario.password }}</td>
+          </tr>
+					
+        </tbody>
+      </table>
+			<br>
+					<button (click)="regresar()" class="btn btn-outline-dark" type="button"> REGRESAR </button>
+    </div>
+  </div>
+</div>
